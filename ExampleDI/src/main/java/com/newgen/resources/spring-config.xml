@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+
+    <!-- bean definitions here : setter method injection  
+    <bean class="com.newgen.beans.Student" id="stdId">
+    	<property name="name" value="Balkrishna2"/>
+    	<property name="rollno" value="111"/>
+    	<property name="address" ref="addrId"/>
+    </bean>
+    
+    
+    <bean class="com.newgen.beans.Address" id="addrId">
+    	<property name="houseno" value="43"/>
+    	<property name="city" value="pune"/>
+    	<property name="pincode" value="412307"/>
+    </bean>  -->
+    
+    
+    <!-- bean definitions here : constructor injection 
+    <bean class="com.newgen.beans.Student" id="stdId">
+    	<constructor-arg  value="999"/>
+    	<constructor-arg  ref="addrId" />
+    	<constructor-arg  value="Balkrishna91"/>
+    </bean>
+    
+    
+    <bean class="com.newgen.beans.Address" id="addrId">
+    	<constructor-arg  value="27"/>
+    	<constructor-arg  value="Pune"/>
+    	<constructor-arg  value="12345"/>
+    </bean>  
+    -->  
+    
+    
+     <!-- bean definitions here : constructor injection -->
+    <bean class="com.newgen.beans.Student" id="stdId" autowire="byType">
+    	<property name="name" value="Balkrishna2"/>
+    	<property name="rollno" value="111"/>
+    </bean>
+    
+    
+    <bean class="com.newgen.beans.Address" id="address">
+    	<constructor-arg  value="27"/>
+    	<constructor-arg  value="Pune"/>
+    	<constructor-arg  value="12345"/>
+    </bean>  
+    
+
+
+</beans>
